@@ -23,5 +23,5 @@ public interface GameData {
      *
      * @return name of player who made the input
      */
-    String getPlayername();
+    int getPlayername();
 }

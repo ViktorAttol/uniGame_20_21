@@ -31,4 +31,9 @@ public class TCPConnector implements Client, Connection, Server{
     public InputStream getInputStream() throws IOException {
         return this.socket.getInputStream();
     }
+
+    @Override
+    public Socket getSocket() {
+        return this.socket;
+    }
 }

@@ -10,7 +10,7 @@ public class GameDataExchanger implements GameDataSender, GameDataReceiver {
         daos.writeLong(data.getTimeStamp());
         daos.writeInt(data.getInputIndex());
         daos.writeInt(data.getRound());
-        daos.writeUTF(data.getPlayername());
+        daos.writeInt(data.getPlayername());
     }
 
     @Override
@@ -20,9 +20,9 @@ public class GameDataExchanger implements GameDataSender, GameDataReceiver {
         long timeStamp = dais.readLong();
         int index = dais.readInt();
         int round = dais.readInt();
-        String playerName = dais.readUTF();
+        int playerName = dais.readInt();
 
-        GameData returnGameData = new GameDataImpl(timeStamp, index, round, playerName);
+        GameData returnGameData = new GameDataImpl(index, round, playerName);
         return returnGameData;
     }
 

@@ -1,14 +1,18 @@
 package gameData;
 
-class GameDataImpl implements GameData{
+import java.sql.Timestamp;
+import java.util.Date;
+
+public class GameDataImpl implements GameData{
 
     private long timestamp;
     private int index;
     private int round;
-    private String playerName;
+    private int playerName;
 
-    GameDataImpl(long timestamp, int index, int round, String playerName){
-        this.timestamp = timestamp;
+    public GameDataImpl(int index, int round, int playerName){
+        Date date = new Date();
+        this.timestamp = date.getTime();
         this.index = index;
         this.round = round;
         this.playerName = playerName;
@@ -30,7 +34,7 @@ class GameDataImpl implements GameData{
     }
 
     @Override
-    public String getPlayername() {
+    public int getPlayername() {
         return this.playerName;
     }
 }

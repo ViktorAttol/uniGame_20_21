@@ -18,4 +18,10 @@ public interface Connection {
      */
     InputStream getInputStream() throws IOException;
 
+    /**
+     *
+     * @return socket of connection
+     */
+    Socket getSocket();
+
 }

@@ -6,7 +6,7 @@ public class GameStateImpl implements GameState {
 
     private int[][] gameState;
 
-    GameStateImpl(int width, int height){
+    public GameStateImpl(int width, int height){
         this.layoutWidth = width;
         this.layoutHeight = height;
         this.gameState = new int[height][width];
