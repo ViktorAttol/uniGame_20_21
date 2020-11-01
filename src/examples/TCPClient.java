@@ -1,4 +1,4 @@
-package Client;
+package examples;
 
 import java.io.*;
 import java.net.Socket;
@@ -45,21 +45,6 @@ public class TCPClient {
         } catch (IOException ex) {System.err.println("couldn’t read data (fatal)");
             System.exit(0);
         }
-        /*
-
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(isr);
-
-        try {
-            String readString = br.readLine();
-            System.out.println("read: " + readString);
-        } catch (IOException ex) {
-            System.err.println("couldn’t read data (fatal)");
-            System.exit(0);
-        }
-        ps.println("Hello Stream");
-        ps.println("Hello Stream");
-  */
         Thread.sleep(1000);
         socket.close();
     }
